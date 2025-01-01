@@ -1,3 +1,50 @@
 admin->admin@gmail.com -->admin
 user->sagardeore120@gmail.com-->sagar
 doctor->jagtap98@gmail.com->jagtap
+//APPOINTMENT
+CREATE TABLE `appointment` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `user_id` int NOT NULL,
+  `fullname` varchar(255) NOT NULL,
+  `gender` varchar(10) DEFAULT NULL,
+  `age` varchar(10) DEFAULT NULL,
+  `appoint_date` varchar(15) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `phno` varchar(15) DEFAULT NULL,
+  `diseases` varchar(500) DEFAULT NULL,
+  `doctor_id` int DEFAULT NULL,
+  `address` varchar(500) DEFAULT NULL,
+  `status` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+SELECT * FROM hospital_2.user_dtls;
+
+//DOCTOR
+CREATE TABLE `doctor` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `full_name` varchar(255) NOT NULL,
+  `dob` varchar(15) DEFAULT NULL,
+  `qualification` varchar(255) DEFAULT NULL,
+  `specialist` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `mobno` varchar(15) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+SELECT * FROM hospital_2.doctor;
+
+//SPECIALIST
+CREATE TABLE `specialist` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `spec_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+//User
+CREATE TABLE `user_dtls` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `fullname` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
